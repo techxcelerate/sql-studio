@@ -1,6 +1,8 @@
 # SQL Studio
 
-![SQL Studio Logo](images/logo.png) <!-- Assuming icons are in the repo; adjust if needed -->
+<div align="center">
+   <img src="images/logo.png" alt="SQL Studio Logo" width="100" height="100" />
+</div>
 
 **SQL Studio** is a powerful, user-friendly desktop application developed by [techXcelerate](https://ntxm.org) (ntxm.org) designed to simplify database management for professionals and teams working with offline SQL databases. Built with a focus on security, performance, and an intuitive visual interface, SQL Studio allows you to visualize, query, and perform all CRUD (Create, Read, Update, Delete) operations without writing repetitive SQL code manually.
 
@@ -30,20 +32,24 @@ SQL Studio solves the common pain points of traditional CLI tools or bulky IDEs 
 ## Screenshots
 
 ### Connection Panel
+
 Connect to your database with ease:
-![Connection Panel](images/connection-panel-screenshot.png) 
+![Connection Panel](images/connection-panel-screenshot.png)
 
 ### Database and Table Browser
+
 Explore databases and tables in the sidebar, with data views in the main panel:
-![Database Browser](images/database-browser.png) 
+![Database Browser](images/database-browser.png)
 
 ### Table Data View
+
 View, edit, and manage table data:
 ![Table View](images/table-view.png)
 
 ### SQL Terminal
+
 Run custom queries:
-![SQL Terminal](images/sql-terminal.png) 
+![SQL Terminal](images/sql-terminal.png)
 
 For more visuals, check out the [releases page](https://github.com/techxcelerate/sql-studio/releases) or download the app to experience it firsthand.
 
@@ -56,7 +62,7 @@ SQL Studio is available as pre-built binaries for easy installation. Download th
 3. Download the installer for your platform:
    - **Windows**: `SQL.Studio_0.0.1_x64_en-US.msi`
    - **macOS**: (not available till now)
-   - **Linux**:(not available till now)
+   - **Linux**: (not available till now)
 4. Run the installer and follow the on-screen instructions.
 5. Launch SQL Studio from your applications menu.
 
@@ -103,4 +109,4 @@ This software is proprietary. Unauthorized copying, modification, distribution, 
 - **Support**: [contact@ntxm.org](mailto:contact@ntxm.org)
 - **GitHub Repo**: [techxcelerate/sql-studio](https://github.com/techxcelerate/sql-studio) (for releases and issues only; source code is not open for contributions)
 
-Thank you for using SQL Studio! If you find it valuable, share your feedback via issues—we appreciate it.
+Thank you for using SQL Studio! If you find it valuable, share your feedback - We appreciate it.
