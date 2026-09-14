@@ -1,0 +1,64 @@
+SQL Studio Proprietary License
+Copyright (c) 2024–2026 ntxm / nitiksh. All rights reserved.
+
+IMPORTANT — READ CAREFULLY.
+This software is PRIVATE / PROPRIETARY. It is NOT open source, NOT freeware
+source, and NOT licensed under MIT, Apache, GPL, or any similar public license.
+No rights are granted except those expressly stated below.
+
+1. FREE USE OF THE OFFICIAL APPLICATION
+   You may install and use the official SQL Studio application (the binary /
+   packaged product as published by the copyright holder through an official
+   channel) free of charge for personal or commercial purposes, for the
+   version(s) you obtained.
+
+2. REDISTRIBUTION — OFFICIAL INSTALLER ONLY (SOLE EXCEPTION)
+   The ONLY redistribution right granted is this:
+
+   You may redistribute the official SQL Studio installer / package
+   (for example the official Windows `.exe` / `.msi`, or the official
+   macOS / Linux packages published by the copyright holder) IF AND ONLY IF:
+
+   (a) it is the exact official build published by the copyright holder;
+   (b) it is unmodified in every respect (no repackaging, patching, wrapping,
+       bundling with malware, or changing contents);
+   (c) the product name “SQL Studio”, studio “ntxm”, author attribution,
+       icons, trademarks, and copyright notices remain intact and visible;
+   (d) you do not present the software as your own product, fork, or rebrand.
+
+   No other redistribution is allowed in any case.
+
+3. EVERYTHING ELSE IS PROHIBITED
+   Without prior written permission from the copyright holder, you may NOT,
+   in any case:
+
+   - copy, publish, mirror, upload, or redistribute the source code
+     (in whole or in part);
+   - fork, clone-for-redistribution, or create derivative works from the source;
+   - build, ship, sell, rent, lease, or sublicense unofficial binaries;
+   - modify and redistribute the installer or any unofficial package;
+   - remove, obscure, or alter names, logos, copyright, or attribution;
+   - reverse engineer, decompile, or disassemble the binaries, except to the
+     limited extent that applicable law expressly prohibits such a restriction;
+   - use “SQL Studio”, “ntxm”, or related marks to imply endorsement of an
+     unofficial build, fork, or competing product;
+   - claim that a public repository, mirror, or screenshot grants open-source
+     rights — it does not.
+
+4. NO IMPLIED RIGHTS
+   All rights not expressly granted in sections 1–2 are reserved by the
+   copyright holder. Viewing source for transparency or collaboration with the
+   copyright holder does not grant a license to use, copy, or redistribute that
+   source.
+
+5. NO WARRANTY
+   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+   LIABILITY ARISING FROM USE OF THE SOFTWARE.
+
+6. CONTACT
+   For any exception beyond sections 1–2, contact the copyright holder in
+   writing first. No exception is valid unless granted in writing.
+   https://ntxm.org
