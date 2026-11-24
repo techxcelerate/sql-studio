@@ -6,11 +6,11 @@
 
 ### SQL Studio
 
-**v0.1.3** · Local-first desktop SQL IDE · Windows · macOS · Linux
+**v0.1.4** · Local-first desktop SQL IDE · Windows
 
 A high-performance database client, query IDE, schema visualizer, and optional DeepSeek agent — built with **Tauri 2**, **Rust**, and **React 19**.
 
-[Download latest release](https://github.com/techxcelerate/sql-studio/releases) · [ntxm.org](https://ntxm.org) · [nitiksh](https://nitiksh.ntxm.org)
+[Windows v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [ntxm.org](https://ntxm.org) · [nitiksh](https://nitiksh.ntxm.org)
 
 `PostgreSQL` · `MySQL` · `SQLite`
 
@@ -27,49 +27,49 @@ A high-performance database client, query IDE, schema visualizer, and optional D
 
 ---
 
-## Screenshots (v0.1.3)
+## Screenshots (v0.1.4)
 
 <p align="center">
-  <img src="images/01-connection-hub-mysql.png" alt="Connection Hub — MySQL new connection" width="100%" />
+  <img src="images/01-connection-hub.png" alt="Connection Hub — new MySQL connection" width="100%" />
   <br />
-  <em>Connection Hub — MySQL setup, SSH tunnel, encrypted credentials</em>
+  <em>Connection Hub — MySQL, PostgreSQL, or SQLite, with SSH tunnel and encrypted credentials</em>
 </p>
 
 <p align="center">
-  <img src="images/03-editor-results-agent.png" alt="SQL editor, query results, and Agent" width="100%" />
+  <img src="images/02-schema-visualizer.png" alt="Schema visualizer with table groups" width="100%" />
   <br />
-  <em>Monaco editor · query results · Agent BETA summarizing the run</em>
+  <em>Schema visualizer — groups, relationships, and the agent explaining a group</em>
 </p>
 
 <p align="center">
-  <img src="images/02-agent-keep-revert-edit.png" alt="Agent Keep/Revert file edit review" width="100%" />
+  <img src="images/03-sql-editor.png" alt="SQL editor, completions, results, and agent" width="100%" />
   <br />
-  <em>Agent file edits with Keep / Revert review in the editor</em>
+  <em>Monaco editor with schema completions, query results, and the agent</em>
 </p>
 
 <p align="center">
-  <img src="images/04-database-objects-table.png" alt="Database Objects — table columns" width="100%" />
+  <img src="images/04-database-objects.png" alt="Database Objects — tables" width="100%" />
   <br />
-  <em>Database Objects — table detail, columns, constraints</em>
+  <em>Database Objects — every table, with Open, and the agent listing them</em>
 </p>
 
 <p align="center">
-  <img src="images/05-database-objects-procedure.png" alt="Database Objects — procedure source" width="100%" />
+  <img src="images/05-functions.png" alt="Function source with Open in editor" width="100%" />
   <br />
-  <em>Database Objects — procedures with Open in editor + Agent explain</em>
+  <em>Functions and procedures — formatted source, Open in editor</em>
 </p>
 
 <p align="center">
-  <img src="images/06-schema-visualizer-groups.png" alt="Schema visualizer with table groups" width="100%" />
+  <img src="images/06-data-editor.png" alt="Data grid with the edit panel open" width="100%" />
   <br />
-  <em>Schema Visualizer — table groups, relationships, context menu</em>
+  <em>Data grid — pick another row and the edit panel stays open on that row</em>
 </p>
 
 ---
 
 ## What is SQL Studio?
 
-**SQL Studio** is a native desktop database IDE from **[ntxm](https://ntxm.org)** / **[nitiksh](https://nitiksh.ntxm.org)**. Connect to your databases, write SQL in Monaco, browse and edit rows, manage views / functions / procedures, explore relationships on a live schema canvas, and optionally use a DeepSeek agent — without sending your data to a cloud IDE.
+**SQL Studio** is a native desktop database IDE from **[ntxm](https://ntxm.org)** / **[nitiksh](https://nitiksh.ntxm.org)**. Connect to your databases, write SQL in Monaco, browse and edit rows, manage views, functions, and procedures, explore relationships on a live schema canvas, and optionally use a DeepSeek agent — without sending your data to a cloud IDE.
 
 | Pillar | What you get |
 |---|---|
@@ -86,120 +86,130 @@ A high-performance database client, query IDE, schema visualizer, and optional D
 ### Connection Hub
 
 - **PostgreSQL**, **MySQL** (MariaDB-compatible), and **SQLite** in one place
-- Test connection with server version + latency before saving
+- Test connection with server version and latency before saving
 - Recent connections from the encrypted store
-- Quick **Open SQLite file** (WAL + foreign keys on connect)
+- Quick **Open SQLite file** (WAL and foreign keys on connect)
 - **Import** `postgres://` / `mysql://` / SQLite path or URI into the form
-- Optional **SSH tunnel** (password or private key) with known-hosts TOFU
+- Optional **SSH tunnel** (password or private key) with known-hosts on first connect
 - SSL modes: `disable` · `prefer` · `require`
 
-### Workspace & Explorer
+### Workspace and Explorer
 
-- Layout, tabs, and canvas state remembered **per connection / database**
+- Layout, tabs, and canvas state remembered **per connection and database**
 - Schema browser: **Tables · Views · Procedures · Functions**
 - Open a workspace folder; create, rename, delete, and open SQL files
-- Virtual tabs (`virtual://…`) for scratch queries and object SQL
-- Autosave + recovery for unsaved work
+- Virtual tabs for scratch queries and object SQL
+- Autosave and recovery for unsaved work
 
-### Database Objects (new in the 0.1.x line)
+### Database Objects
 
-- Keep-alive workspace: **Tables · Views · Functions · Procedures** (Triggers coming later)
-- Table designer / column detail with View data
-- View & routine source in Monaco; **Open in editor**; Drop where supported
-- Selection synced with the Explorer sidebar
+- **Tables · Views · Functions · Procedures** (Triggers are not in this version)
+- Table list with column counts and **Open**
+- View and routine source, formatted, with **Open in editor**
+- Drop a view, function, or procedure where the engine supports it
+- Selection stays in sync with the Explorer sidebar
 
-### Monaco SQL Editor
+### Monaco SQL editor
 
-- VS Code–class editing: highlighting, multi-cursor, format, run
+- Highlighting, multi-cursor, format, and run
 - Schema-aware completions from live introspection
-- Multi-tab files and an integrated results strip
-- **Keep / Revert** when the agent proposes file or `virtual://` object edits
-- Ask Agent from editor problem markers
+- Several SQL files open, with results under the editor
+- **Keep / Revert** when the agent proposes a file or object-SQL edit
+- Ask Agent from an editor problem marker
 
-### Schema Visualizer
+### Schema visualizer
 
-- Interactive ER-style canvas: pan, zoom, multi-select, hide, fit
+- Pan, zoom, multi-select, hide, and fit
 - Auto-layout that respects relationships and **table groups**
-- Color-coded groups with an IDE-style context menu
-- Export diagram as **PNG** or **SVG**
-- Jump to the **Inspector** for columns, indexes, constraints, and approximate DDL
+- Color-coded groups, links between groups, and a context menu
+- Export the diagram as **PNG** or **SVG**, including a whole group or the selected tables even when they are off screen
+- Inspector for columns, indexes, constraints, and approximate DDL
+- The agent can move the camera, search the canvas, and export a fitted diagram
 
-### Data Browser
+### Data browser
 
 - Virtualized grid with pagination and row selection
-- Visual **filters** (AND rules, rich operators)
-- **Insert / Edit / Delete** with primary-key aware SQL
-- **Export** page / all / custom limit as **CSV** or **JSON**
-- Side tools: History · Filter · Export · Insert · Edit · Delete
+- Visual **filters**
+- **Insert / Edit / Delete** using primary-key aware SQL
+- Choosing another row while Edit or Delete is open updates that panel instead of closing it
+- **Export** the page, the filtered set, or a custom limit as **CSV** or **JSON**
+- Structure, indexes, and foreign keys on the same table panel
 
-### DeepSeek Agent (optional)
+### DeepSeek agent (optional)
 
-- Streaming agent for schema, SQL, explorer, canvas, objects, and data workflows
-- Scoped to the **current database** (no silent cross-DB hopping)
-- Permission modes: `readonly` (default) · `ask` · `allowlist`
-- Edits workspace `.sql` files and open `virtual://` object tabs with Keep / Revert
-- Requires your own DeepSeek API key (stored encrypted). Traffic goes to DeepSeek only when you use the agent — not to ntxm servers.
+- One chat for the whole app. Switching database or table does not clear it
+- Stays on the side of the hub and the workspace
+- Works with schema, SQL, explorer, canvas, objects, and the data grid
+- Permission modes: **Readonly** · **Ask** · **Allowlist**
+- Ask confirms writes. Allowlist runs them. `CREATE DATABASE` and `USE` stay blocked
+- Can save and test connections, switch database, and speak a prompt from the microphone
+- Long chats send only the recent conversation. The agent can look up an older reply when it needs it
+- A failure is shown once, as normal text
+- Your DeepSeek key stays encrypted on this PC. Agent traffic goes to DeepSeek only when you use it — not to ntxm
 
 ### Desktop chrome
 
-- Custom titlebar and resizable IDE panels
+- Custom titlebar and resizable panels
 - Activity rail: **Explorer · Database Objects · Agent · Settings**
-- Status bar: connection, SSH, timing, **v0.1.3**
+- Status bar shows the connection, timing, and **v0.1.4**
 
 ---
 
-## Security & privacy
+## Security and privacy
 
 | Layer | Detail |
 |---|---|
-| **Credentials** | AES-256-GCM at rest; random IV per record; OS-protected key file |
-| **SSH** | Jump host support; password or key; first-connect known-hosts (TOFU) |
-| **TLS to DB** | `ssl_mode` passed to the driver (`disable` / `prefer` / `require`) |
-| **Filesystem** | App data by default; workspace folders granted after you open them |
-| **Agent SQL** | Parser-based read-only checks + database-scope rules |
-| **Telemetry** | None from the product core |
+| **Credentials** | AES-256-GCM at rest; random IV per record; key file on this PC |
+| **SSH** | Jump host; password or key; first-connect known-hosts |
+| **TLS to the database** | `ssl_mode` passed to the driver (`disable` / `prefer` / `require`) |
+| **Filesystem** | App data by default; a workspace folder is granted after you open it |
+| **Agent SQL** | Read-only checks in Readonly mode, plus database-scope rules |
+| **Telemetry** | None from the product |
 
 ---
 
-## Download & install
+## Download and install
 
-1. Open **[Releases](https://github.com/techxcelerate/sql-studio/releases)**
-2. Get the **official** installer for your OS (Windows / macOS / Linux)
-3. Install, launch **SQL Studio**, and connect from the Hub
+**v0.1.4 is a Windows release.** Open the release page and use the Windows installer published there. This page does not link a file directly.
+
+1. Open **[SQL Studio v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4)**
+2. Install the official Windows build
+3. Launch **SQL Studio** and connect from the Hub
 
 | | |
 |---|---|
 | **Product** | SQL Studio |
-| **Version** | **0.1.3** |
-| **Platforms** | Windows · macOS · Linux |
+| **Version** | **0.1.4** |
+| **This release** | Windows |
 | **Engines** | PostgreSQL · MySQL · SQLite |
 | **Stack** | Tauri 2 · Rust · React 19 · Monaco |
 
-Only **official** installers published by the copyright holder may be redistributed — unmodified, with product name and branding intact. Nothing else may be redistributed.
+Only **official** installers published by the copyright holder may be redistributed — unmodified, with the product name and branding intact. Nothing else may be redistributed.
 
 ---
 
-## What’s in / out of v0.1.3
+## What’s in / out of v0.1.4
 
 **Shipped**
 
-- Multi-engine hub, SSH, encrypted saved connections  
-- Monaco editor + schema intelligence + Ask Agent from markers  
-- **Database Objects** (tables / views / functions / procedures)  
-- Agent Keep / Revert on workspace files and `virtual://` object SQL  
-- Schema canvas with groups & PNG/SVG export  
-- Data grid with filter / CRUD / CSV·JSON export  
-- DeepSeek agent (optional)  
-- Workspace persistence & Explorer polish  
+- Multi-engine hub, SSH, and encrypted saved connections
+- Monaco editor, schema completions, and Ask Agent from markers
+- Database Objects for tables, views, functions, and procedures, with formatted SQL and Open in editor
+- Schema canvas with groups, relationships, and PNG/SVG export that can fit a group or a selection
+- Data grid with filter, insert, edit, delete, and CSV/JSON export. The edit panel follows the row you click
+- One agent chat for the app, with Readonly / Ask / Allowlist, microphone input, and a shorter recent context
+- The agent can drive the canvas, connections, and the open workspace
+- Workspace persistence
 
-**Not shipped yet** (don’t expect these)
+**Not in this version**
 
-- Extra database engines beyond the three above  
-- Triggers introspection  
-- Auto-deploy of object DDL to the live DB after Keep  
-- SQL dump / INSERT export (CSV + JSON only)  
-- Schema PDF / SQL diagram export  
-- Non-DeepSeek AI providers  
+- macOS and Linux builds of 0.1.4
+- Triggers
+- Extra database engines
+- Deploying edited object SQL back to the database from Keep
+- SQL dump / INSERT export (CSV and JSON only)
+- Schema PDF export
+- AI providers other than DeepSeek
 
 ---
 
@@ -231,14 +241,14 @@ Copyright © 2024–2026 **ntxm** / **nitiksh**. All rights reserved.
 | **Product** | SQL Studio |
 | **Studio** | [ntxm](https://ntxm.org) |
 | **Author** | [nitiksh](https://nitiksh.ntxm.org) |
-| **Releases** | [github.com/techxcelerate/sql-studio/releases](https://github.com/techxcelerate/sql-studio/releases) |
+| **v0.1.4** | [github.com/techxcelerate/sql-studio/releases/tag/v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) |
 
 ---
 
 <div align="center">
 
-**SQL Studio** · v0.1.3 · Proprietary · Local-first
+**SQL Studio** · v0.1.4 · Proprietary · Local-first · Windows
 
-[Download](https://github.com/techxcelerate/sql-studio/releases) · [License](./LICENSE) · [ntxm.org](https://ntxm.org)
+[v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [License](./LICENSE) · [ntxm.org](https://ntxm.org)
 
 </div>
