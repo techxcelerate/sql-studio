@@ -6,11 +6,11 @@
 
 ### SQL Studio
 
-**v0.1.4** · Local-first desktop SQL IDE · Windows
+**v0.1.4** · Local-first desktop SQL IDE · Windows and macOS
 
 A high-performance database client, query IDE, schema visualizer, and optional DeepSeek agent — built with **Tauri 2**, **Rust**, and **React 19**.
 
-[Windows v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [ntxm.org](https://ntxm.org) · [nitiksh](https://nitiksh.ntxm.org)
+[Windows](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_x64_en-US.msi) · [macOS](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_aarch64.dmg) · [v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [ntxm.org](https://ntxm.org) · [nitiksh](https://nitiksh.ntxm.org)
 
 `PostgreSQL` · `MySQL` · `SQLite`
 
@@ -170,17 +170,21 @@ A high-performance database client, query IDE, schema visualizer, and optional D
 
 ## Download and install
 
-**v0.1.4 is a Windows release.** Open the release page and use the Windows installer published there. This page does not link a file directly.
+**v0.1.4** is the current release for Windows (x64) and macOS (Apple silicon).
 
-1. Open **[SQL Studio v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4)**
-2. Install the official Windows build
+- **[Windows installer (MSI)](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_x64_en-US.msi)**
+- **[macOS installer (Apple silicon DMG)](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_aarch64.dmg)**
+- **[v0.1.4 release page](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4)**
+
+1. Download the installer for your computer
+2. Install the official build
 3. Launch **SQL Studio** and connect from the Hub
 
 | | |
 |---|---|
 | **Product** | SQL Studio |
 | **Version** | **0.1.4** |
-| **This release** | Windows |
+| **This release** | Windows x64 · macOS Apple silicon |
 | **Engines** | PostgreSQL · MySQL · SQLite |
 | **Stack** | Tauri 2 · Rust · React 19 · Monaco |
 
@@ -203,7 +207,8 @@ Only **official** installers published by the copyright holder may be redistribu
 
 **Not in this version**
 
-- macOS and Linux builds of 0.1.4
+- Linux builds of 0.1.4
+- Intel Mac builds (the DMG is Apple silicon)
 - Triggers
 - Extra database engines
 - Deploying edited object SQL back to the database from Keep
@@ -241,14 +246,14 @@ Copyright © 2024–2026 **ntxm** / **nitiksh**. All rights reserved.
 | **Product** | SQL Studio |
 | **Studio** | [ntxm](https://ntxm.org) |
 | **Author** | [nitiksh](https://nitiksh.ntxm.org) |
-| **v0.1.4** | [github.com/techxcelerate/sql-studio/releases/tag/v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) |
+| **v0.1.4** | [Release](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [Windows MSI](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_x64_en-US.msi) · [macOS DMG](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_aarch64.dmg) |
 
 ---
 
 <div align="center">
 
-**SQL Studio** · v0.1.4 · Proprietary · Local-first · Windows
+**SQL Studio** · v0.1.4 · Proprietary · Local-first · Windows and macOS
 
-[v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [License](./LICENSE) · [ntxm.org](https://ntxm.org)
+[Windows](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_x64_en-US.msi) · [macOS](https://github.com/techxcelerate/sql-studio/releases/download/v0.1.4/SQL.Studio_0.1.4_aarch64.dmg) · [v0.1.4](https://github.com/techxcelerate/sql-studio/releases/tag/v0.1.4) · [License](./LICENSE) · [ntxm.org](https://ntxm.org)
 
 </div>
